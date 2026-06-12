@@ -80,13 +80,10 @@
             border-radius: 12px;
             padding: 0;
             margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
         }
 
         .question-image {
             width: 100%;
-            max-height: 250px;
             border-radius: 10px;
             display: block;
             object-fit: cover;
@@ -314,7 +311,7 @@
             c: 2
         },
         {
-            q: "8. Si conduce un camión de más de 3.500 kg de masa máxima autorizada, debe saber que en las operations de carga y descarga:",
+            q: "8. Si conduce un camión de más de 3.500 kg de masa máxima autorizada, debe saber que en las operaciones de carga y descarga:",
             o: [
                 "A) Se pueden dejar las mercancías en la acera provisionalmente si no molestan.",
                 "B) Se puede ocupar toda la calzada si es por poco tiempo.",
@@ -446,8 +443,8 @@
         document.getElementById("progress-lbl").innerText = `Pregunta ${step + 1} de ${db.length}`;
         document.getElementById("bar-fill").style.width = `${((step + 1) / db.length) * 100}%`;
         
-        // CORRECTION : Target root directly and use .jpeg extension matching your files
-        document.getElementById("quiz-img").src = `${step + 1}.jpeg`;
+        // Image Dynamic Load
+        document.getElementById("quiz-img").src = `img/${step + 1}.jpeg`;
         
         // Text Content
         document.getElementById("question-html").innerText = data.q;
